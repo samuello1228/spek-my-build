@@ -1,0 +1,25 @@
+#install dependencies
+brew install automake coreutils intltool
+
+#need to use ffmpeg 4 for using avcodec_decode_audio4
+brew install ffmpeg@4
+
+#install wxwidgets
+brew install wxwidgets
+
+#set path for finding the file wxwin.m4
+echo '/usr/local/Cellar/wxwidgets/3.2.0/share/wx/3.2/aclocal/' >> /usr/local/Cellar/automake/1.16.5/share/aclocal/dirlist
+
+#get source (spek)
+git clone https://github.com/alexkay/spek.git
+cd spek
+git checkout v0.8.4
+
+#build
+./dist/osx/bundle.sh
+
+#run
+./dist/osx/Spek.app/Contents/MacOS/Spek
+
+#the dmg file
+./dist/osx/Spek.dmg
