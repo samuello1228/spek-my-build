@@ -18,7 +18,7 @@ git checkout f071c29
 #get source (spek-alternative)
 git clone https://github.com/withmorten/spek-alternative.git
 cd spek-alternative
-git checkout release/v0.8.2.3
+git checkout 0.8.2.3
 
 #build
 ./dist/osx/bundle.sh
