@@ -30,6 +30,10 @@ brew install wxwidgets
 #https://github.com/Homebrew/homebrew-core/commit/f5e3982c5c1f83906ba3f8aef422dda3e5a1dda0
 find $(brew --cellar wxwidgets) -name "wxwin.m4" -exec ln -s {} /usr/local/share/aclocal/wxwin.m4 \;
 
+#Fix libbrotli loader_path
+sudo install_name_tool -change "@loader_path/libbrotlicommon.1.dylib" "/usr/local/lib/libbrotlicommon.1.dylib" /usr/local/lib/libbrotlidec.1.dylib
+sudo install_name_tool -change "@loader_path/libbrotlicommon.1.dylib" "/usr/local/lib/libbrotlicommon.1.dylib" /usr/local/lib/libbrotlienc.1.dylib
+
 #get source (spek)
 git clone https://github.com/alexkay/spek.git
 cd spek

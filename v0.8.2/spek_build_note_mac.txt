@@ -21,6 +21,18 @@ git clone https://github.com/withmorten/spek-alternative.git
 cd spek-alternative
 git checkout 0.8.2.3
 
+#update /etc/ssl/cert.pem
+https://curl.se/docs/caextract.html
+download cacert.pem
+rename it to /etc/ssl/cert.pem
+
+#install perl module XML::Parser
+cpan install XML::Parser
+
+#Fix libbrotli loader_path
+sudo install_name_tool -change "@loader_path/libbrotlicommon.1.dylib" "/usr/local/lib/libbrotlicommon.1.dylib" /usr/local/lib/libbrotlidec.1.dylib
+sudo install_name_tool -change "@loader_path/libbrotlicommon.1.dylib" "/usr/local/lib/libbrotlicommon.1.dylib" /usr/local/lib/libbrotlienc.1.dylib
+
 #build
 ./dist/osx/bundle.sh
 

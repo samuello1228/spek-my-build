@@ -16,6 +16,10 @@ git clone https://github.com/alexkay/spek.git
 cd spek
 git checkout v0.8.4
 
+#Fix libbrotli loader_path
+sudo install_name_tool -change "@loader_path/libbrotlicommon.1.dylib" "/usr/local/lib/libbrotlicommon.1.dylib" /usr/local/lib/libbrotlidec.1.dylib
+sudo install_name_tool -change "@loader_path/libbrotlicommon.1.dylib" "/usr/local/lib/libbrotlicommon.1.dylib" /usr/local/lib/libbrotlienc.1.dylib
+
 #build
 ./dist/osx/bundle.sh
 
