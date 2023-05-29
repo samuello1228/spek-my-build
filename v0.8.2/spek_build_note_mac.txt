@@ -8,7 +8,8 @@ brew install ffmpeg@4
 brew install wxwidgets
 
 #set path for finding the file wxwin.m4
-echo '/usr/local/Cellar/wxwidgets/3.1.5/share/wx/3.1/aclocal/' >> /usr/local/Cellar/automake/1.16.5/share/aclocal/dirlist
+#https://github.com/Homebrew/homebrew-core/commit/f5e3982c5c1f83906ba3f8aef422dda3e5a1dda0
+find $(brew --cellar wxwidgets) -name "wxwin.m4" -exec ln -s {} /usr/local/share/aclocal/wxwin.m4 \;
 
 #get source (spek)
 git clone https://github.com/alexkay/spek.git
