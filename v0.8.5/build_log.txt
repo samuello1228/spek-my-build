@@ -38,7 +38,7 @@ autoreconf: running: aclocal --force
 autoreconf: running: /usr/local/Cellar/autoconf/2.71/bin/autoconf --force
 configure.ac:12: warning: The macro `AC_PROG_LIBTOOL' is obsolete.
 configure.ac:12: You should run autoupdate.
-aclocal.m4:3901: AC_PROG_LIBTOOL is expanded from...
+aclocal.m4:2845: AC_PROG_LIBTOOL is expanded from...
 configure.ac:12: the top level
 autoreconf: running: /usr/local/Cellar/autoconf/2.71/bin/autoheader --force
 autoreconf: running: automake --add-missing --copy --force-missing
@@ -83,7 +83,7 @@ checking how to run the C++ preprocessor... g++ -E
 checking build system type... x86_64-apple-darwin18.7.0
 checking host system type... x86_64-apple-darwin18.7.0
 checking how to print strings... printf
-checking for a sed that does not truncate output... /usr/local/bin/gsed
+checking for a sed that does not truncate output... /usr/bin/sed
 checking for grep that handles long lines and -e... /usr/bin/grep
 checking for egrep... /usr/bin/grep -E
 checking for fgrep... /usr/bin/grep -F
@@ -164,7 +164,7 @@ checking for libavformat >= 59.27.100... yes
 checking for libavcodec >= 59.37.100... yes
 checking for libavutil >= 57.28.100... yes
 checking for wx-config... /usr/local/bin/wx-config
-checking for wxWidgets version >= 3.0.0... yes (version 3.2.1)
+checking for wxWidgets version >= 3.0.0... yes (version 3.2.2)
 checking for wxWidgets static library... no
 checking whether NLS is requested... yes
 checking for msgfmt... /usr/local/bin/msgfmt
@@ -217,7 +217,7 @@ spek-0.8.5
     Install Prefix: /usr/local
     C++ Compiler:   g++
     OS:             OSX
-    wxWidgets:      3.2.1
+    wxWidgets:      3.2.2
     Use Valgrind:   no
 
 /Applications/Xcode.app/Contents/Developer/usr/bin/make  all-recursive
@@ -247,33 +247,33 @@ rm -f ca.gmo && /usr/local/bin/msgmerge --for-msgfmt -o ca.1po ca.po spek.pot &&
 rm -f cs.gmo && /usr/local/bin/msgmerge --for-msgfmt -o cs.1po cs.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o cs.gmo cs.1po && rm -f cs.1po
 rm -f da.gmo && /usr/local/bin/msgmerge --for-msgfmt -o da.1po da.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o da.gmo da.1po && rm -f da.1po
 rm -f de.gmo && /usr/local/bin/msgmerge --for-msgfmt -o de.1po de.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o de.gmo de.1po && rm -f de.1po
-rm -f el.gmo && /usr/local/bin/msgmerge --for-msgfmt -o el.1po el.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o el.gmo el.1po && rm -f el.1po
 rm -f eo.gmo && /usr/local/bin/msgmerge --for-msgfmt -o eo.1po eo.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o eo.gmo eo.1po && rm -f eo.1po
+rm -f el.gmo && /usr/local/bin/msgmerge --for-msgfmt -o el.1po el.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o el.gmo el.1po && rm -f el.1po
 rm -f es.gmo && /usr/local/bin/msgmerge --for-msgfmt -o es.1po es.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o es.gmo es.1po && rm -f es.1po
-da.1po: eo.1po: 41 translated messages.
-el.1po: 42 translated messages.
-41 translated messages.
+cs.1po: 42 translated messages.
 bs.1po: 41 translated messages.
-cs.1po: ca.1po: 41 translated messages.
-42 translated messages.
+ca.1po: 41 translated messages.
 de.1po: 41 translated messages.
-es.1po: 41 translated messages.
-rm -f fr.gmo && /usr/local/bin/msgmerge --for-msgfmt -o fr.1po fr.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o fr.gmo fr.1po && rm -f fr.1po
+da.1po: 41 translated messages.
+eo.1po: es.1po: 41 translated messages.
+41 translated messages.
+el.1po: 42 translated messages.
 rm -f fi.gmo && /usr/local/bin/msgmerge --for-msgfmt -o fi.1po fi.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o fi.gmo fi.1po && rm -f fi.1po
+rm -f fr.gmo && /usr/local/bin/msgmerge --for-msgfmt -o fr.1po fr.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o fr.gmo fr.1po && rm -f fr.1po
 rm -f gl.gmo && /usr/local/bin/msgmerge --for-msgfmt -o gl.1po gl.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o gl.gmo gl.1po && rm -f gl.1po
 rm -f he.gmo && /usr/local/bin/msgmerge --for-msgfmt -o he.1po he.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o he.gmo he.1po && rm -f he.1po
 rm -f hr.gmo && /usr/local/bin/msgmerge --for-msgfmt -o hr.1po hr.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o hr.gmo hr.1po && rm -f hr.1po
 rm -f hu.gmo && /usr/local/bin/msgmerge --for-msgfmt -o hu.1po hu.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o hu.gmo hu.1po && rm -f hu.1po
 rm -f it.gmo && /usr/local/bin/msgmerge --for-msgfmt -o it.1po it.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o it.gmo it.1po && rm -f it.1po
 rm -f ja.gmo && /usr/local/bin/msgmerge --for-msgfmt -o ja.1po ja.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o ja.gmo ja.1po && rm -f ja.1po
+fi.1po: 41 translated messages.
 fr.1po: 42 translated messages.
 gl.1po: 41 translated messages.
-fi.1po: 41 translated messages.
 he.1po: 41 translated messages.
-hu.1po: 41 translated messages.
 hr.1po: 40 translated messages.
-ja.1po: 41 translated messages.
+hu.1po: 41 translated messages.
 it.1po: 41 translated messages.
+ja.1po: 41 translated messages.
 rm -f ko.gmo && /usr/local/bin/msgmerge --for-msgfmt -o ko.1po ko.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o ko.gmo ko.1po && rm -f ko.1po
 rm -f lv.gmo && /usr/local/bin/msgmerge --for-msgfmt -o lv.1po lv.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o lv.gmo lv.1po && rm -f lv.1po
 rm -f nb.gmo && /usr/local/bin/msgmerge --for-msgfmt -o nb.1po nb.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o nb.gmo nb.1po && rm -f nb.1po
@@ -283,30 +283,30 @@ rm -f pl.gmo && /usr/local/bin/msgmerge --for-msgfmt -o pl.1po pl.po spek.pot &&
 rm -f pt_BR.gmo && /usr/local/bin/msgmerge --for-msgfmt -o pt_BR.1po pt_BR.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o pt_BR.gmo pt_BR.1po && rm -f pt_BR.1po
 rm -f ru.gmo && /usr/local/bin/msgmerge --for-msgfmt -o ru.1po ru.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o ru.gmo ru.1po && rm -f ru.1po
 nl.1po: 41 translated messages.
-pt_BR.1po: 42 translated messages.
 ko.1po: 42 translated messages.
-lv.1po: 41 translated messages.
-ru.1po: 41 translated messages.
-pl.1po: rm -f sk.gmo && /usr/local/bin/msgmerge --for-msgfmt -o sk.1po sk.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o sk.gmo sk.1po && rm -f sk.1po
-rm -f sr@latin.gmo && /usr/local/bin/msgmerge --for-msgfmt -o sr@latin.1po sr@latin.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o sr@latin.gmo sr@latin.1po && rm -f sr@latin.1po
-41 translated messages.
-rm -f sv.gmo && /usr/local/bin/msgmerge --for-msgfmt -o sv.1po sv.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o sv.gmo sv.1po && rm -f sv.1po
-nb.1po: 41 translated messages.
-rm -f th.gmo && /usr/local/bin/msgmerge --for-msgfmt -o th.1po th.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o th.gmo th.1po && rm -f th.1po
+pl.1po: 41 translated messages.
 nn.1po: 41 translated messages.
+rm -f sk.gmo && /usr/local/bin/msgmerge --for-msgfmt -o sk.1po sk.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o sk.gmo sk.1po && rm -f sk.1po
+pt_BR.1po: 42 translated messages.
+rm -f sr@latin.gmo && /usr/local/bin/msgmerge --for-msgfmt -o sr@latin.1po sr@latin.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o sr@latin.gmo sr@latin.1po && rm -f sr@latin.1po
+ru.1po: 41 translated messages.
+rm -f sv.gmo && /usr/local/bin/msgmerge --for-msgfmt -o sv.1po sv.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o sv.gmo sv.1po && rm -f sv.1po
+rm -f th.gmo && /usr/local/bin/msgmerge --for-msgfmt -o th.1po th.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o th.gmo th.1po && rm -f th.1po
 rm -f tr.gmo && /usr/local/bin/msgmerge --for-msgfmt -o tr.1po tr.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o tr.gmo tr.1po && rm -f tr.1po
-rm -f uk.gmo && /usr/local/bin/msgmerge --for-msgfmt -o uk.1po uk.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o uk.gmo uk.1po && rm -f uk.1po
-rm -f vi.gmo && /usr/local/bin/msgmerge --for-msgfmt -o vi.1po vi.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o vi.gmo vi.1po && rm -f vi.1po
 sk.1po: 41 translated messages.
-rm -f zh_CN.gmo && /usr/local/bin/msgmerge --for-msgfmt -o zh_CN.1po zh_CN.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.1po && rm -f zh_CN.1po
-th.1po: 41 translated messages.
-sr@latin.1po:2: warning: header field 'Last-Translator' still has the initial default value
-sr@latin.1po: 41 translated messages.
-rm -f zh_TW.gmo && /usr/local/bin/msgmerge --for-msgfmt -o zh_TW.1po zh_TW.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.1po && rm -f zh_TW.1po
-tr.1po: 41 translated messages.
-uk.1po: 41 translated messages.
-vi.1po: 41 translated messages.
+nb.1po: 41 translated messages.
+sr@larm -f uk.gmo && /usr/local/bin/msgmerge --for-msgfmt -o uk.1po uk.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o uk.gmo uk.1po && rm -f uk.1po
+tin.1po:2: warning: header field 'Last-Translator' still has the initial default value
 sv.1po: 41 translated messages.
+sr@latin.1po: 41 translated messages.
+lv.1po: 41 translated messages.
+th.1po: 41 translated messages.
+tr.1po: 41 translated messages.
+rm -f vi.gmo && /usr/local/bin/msgmerge --for-msgfmt -o vi.1po vi.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o vi.gmo vi.1po && rm -f vi.1po
+rm -f zh_CN.gmo && /usr/local/bin/msgmerge --for-msgfmt -o zh_CN.1po zh_CN.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.1po && rm -f zh_CN.1po
+uk.1po: 41 translated messages.
+rm -f zh_TW.gmo && /usr/local/bin/msgmerge --for-msgfmt -o zh_TW.1po zh_TW.po spek.pot && /usr/local/bin/msgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.1po && rm -f zh_TW.1po
+vi.1po: 41 translated messages.
 zh_CN.1po: 41 translated messages.
 zh_TW.1po: 41 translated messages.
 touch ./stamp-po
@@ -322,13 +322,12 @@ Making all in src
   CXX      spek-spek.o
   CXX      libspek_a-spek-audio.o
   CXX      libspek_a-spek-fft.o
-spek-platform.cc:17:5: warning: 'GetCurrentProcess' is deprecated: first deprecated in macOS 10.9
-      [-Wdeprecated-declarations]
+spek-platform.cc:17:5: warning: 'GetCurrentProcess' is deprecated: first deprecated in macOS 10.9 [-Wdeprecated-declarations]
     GetCurrentProcess(&PSN);
     ^
 /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Processes.h:415:1: note:
       'GetCurrentProcess' has been explicitly marked deprecated here
-MacGetCurrentProcess(ProcessSerialNumber * PSN)               AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER_BUT_DEPR...
+MacGetCurrentProcess(ProcessSerialNumber * PSN)               AVAILABLE_MAC_OS_X_VERSION_10_0_AND_LATER_BUT_DEPRECATED...
 ^
 /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Processes.h:412:34: note:
       expanded from macro 'MacGetCurrentProcess'
@@ -412,35 +411,35 @@ cp: /usr/local/share/locale/zh_CN/LC_MESSAGES/wxstd.mo: No such file or director
 ../../po/zh_TW.gmo -> Spek.app/Contents/Resources/zh_TW.lproj/spek.mo
 cp: /usr/local/share/locale/zh_TW/LC_MESSAGES/wxstd.mo: No such file or directory
 Updating dependendies for Spek.app/Contents/MacOS/Spek.
-	Bundling /usr/local/Cellar/ffmpeg/5.1.2_4/lib/libavformat.59.27.100.dylib.
-	Bundling /usr/local/Cellar/ffmpeg/5.1.2_4/lib/libavcodec.59.37.100.dylib.
-	Bundling /usr/local/Cellar/ffmpeg/5.1.2_4/lib/libavutil.57.28.100.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_osx_cocoau_xrc-3.2.0.1.0.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_osx_cocoau_html-3.2.0.1.0.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_osx_cocoau_qa-3.2.0.1.0.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_osx_cocoau_core-3.2.0.1.0.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_baseu_xml-3.2.0.1.0.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_baseu_net-3.2.0.1.0.dylib.
-	Bundling /usr/local/Cellar/wxwidgets/3.2.1/lib/libwx_baseu-3.2.0.1.0.dylib.
+	Bundling /usr/local/Cellar/ffmpeg/5.1.2_6/lib/libavformat.59.27.100.dylib.
+	Bundling /usr/local/Cellar/ffmpeg/5.1.2_6/lib/libavcodec.59.37.100.dylib.
+	Bundling /usr/local/Cellar/ffmpeg/5.1.2_6/lib/libavutil.57.28.100.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_osx_cocoau_xrc-3.2.0.2.1.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_osx_cocoau_html-3.2.0.2.1.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_osx_cocoau_qa-3.2.0.2.1.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_osx_cocoau_core-3.2.0.2.1.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_baseu_xml-3.2.0.2.1.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_baseu_net-3.2.0.2.1.dylib.
+	Bundling /usr/local/Cellar/wxwidgets/3.2.2.1/lib/libwx_baseu-3.2.0.2.1.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libavformat.59.27.100.dylib.
-	Bundling /usr/local/Cellar/ffmpeg/5.1.2_4/lib/libswresample.4.7.100.dylib.
+	Bundling /usr/local/Cellar/ffmpeg/5.1.2_6/lib/libswresample.4.7.100.dylib.
 	Bundling /usr/local/Cellar/libbluray/1.3.4/lib/libbluray.2.dylib.
-	Bundling /usr/local/Cellar/gnutls/3.7.8_1/lib/libgnutls.30.dylib.
+	Bundling /usr/local/Cellar/gnutls/3.8.0/lib/libgnutls.30.dylib.
 	Bundling /usr/local/Cellar/librist/0.2.7_2/lib/librist.4.dylib.
 	Bundling /usr/local/Cellar/srt/1.5.1/lib/libsrt.1.5.1.dylib.
 	Bundling /usr/local/Cellar/zeromq/4.3.4/lib/libzmq.5.dylib.
-	Bundling /usr/local/Cellar/libvpx/1.12.0/lib/libvpx.7.dylib.
+	Bundling /usr/local/Cellar/libvpx/1.13.0/lib/libvpx.8.dylib.
 	Bundling /usr/local/Cellar/webp/1.3.0/lib/libwebpmux.3.dylib.
 	Bundling /usr/local/Cellar/webp/1.3.0/lib/libwebp.7.dylib.
 	Bundling /usr/local/Cellar/webp/1.3.0/lib/libsharpyuv.0.dylib.
-	Bundling /usr/local/Cellar/xz/5.4.1/lib/liblzma.5.dylib.
+	Bundling /usr/local/Cellar/xz/5.4.2/lib/liblzma.5.dylib.
 	Bundling /usr/local/Cellar/aribb24/1.0.4/lib/libaribb24.0.dylib.
-	Bundling /usr/local/Cellar/dav1d/1.0.0/lib/libdav1d.6.dylib.
+	Bundling /usr/local/Cellar/dav1d/1.1.0/lib/libdav1d.6.dylib.
 	Bundling /usr/local/Cellar/opencore-amr/0.1.6/lib/libopencore-amrwb.0.dylib.
-	Bundling /usr/local/Cellar/snappy/1.1.9/lib/libsnappy.1.1.9.dylib.
-	Bundling /usr/local/Cellar/aom/3.5.0_2/lib/libaom.3.5.0.dylib.
+	Bundling /usr/local/Cellar/snappy/1.1.10/lib/libsnappy.1.1.10.dylib.
+	Bundling /usr/local/Cellar/aom/3.6.0/lib/libaom.3.6.0.dylib.
 	Bundling /usr/local/Cellar/libvmaf/2.3.1/lib/libvmaf.1.dylib.
-	Bundling /usr/local/Cellar/jpeg-xl/0.8.0/lib/libjxl.0.8.0.dylib.
+	Bundling /usr/local/Cellar/jpeg-xl/0.8.1_1/lib/libjxl.0.8.1.dylib.
 	Bundling /usr/local/Cellar/lame/3.100/lib/libmp3lame.0.dylib.
 	Bundling /usr/local/Cellar/opencore-amr/0.1.6/lib/libopencore-amrnb.0.dylib.
 	Bundling /usr/local/Cellar/openjpeg/2.5.0/lib/libopenjp2.2.5.0.dylib.
@@ -456,23 +455,24 @@ Updating dependendies for Spek.app/Contents/Frameworks/libavformat.59.27.100.dyl
 	Bundling /usr/local/Cellar/x264/r3095/lib/libx264.164.dylib.
 	Bundling /usr/local/Cellar/x265/3.5/lib/libx265.199.dylib.
 	Bundling /usr/local/Cellar/libsoxr/0.1.3/lib/libsoxr.0.1.2.dylib.
-	Bundling /usr/local/Cellar/libx11/1.8.3/lib/libX11.6.dylib.
+	Bundling /usr/local/Cellar/libx11/1.8.4/lib/libX11.6.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libavcodec.59.37.100.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libavutil.57.28.100.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_xrc-3.2.0.1.0.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_xrc-3.2.0.2.1.dylib.
 	Bundling /usr/local/Cellar/libpng/1.6.39/lib/libpng16.16.dylib.
-	Bundling /usr/local/Cellar/jpeg-turbo/2.1.5/lib/libjpeg.8.2.2.dylib.
+	Bundling /usr/local/Cellar/jpeg-turbo/2.1.5.1/lib/libjpeg.8.2.2.dylib.
 	Bundling /usr/local/Cellar/libtiff/4.4.0_1/lib/libtiff.5.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_html-3.2.0.1.0.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_qa-3.2.0.1.0.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_core-3.2.0.1.0.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_baseu_xml-3.2.0.1.0.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_baseu_net-3.2.0.1.0.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libwx_baseu-3.2.0.1.0.dylib.
+	Bundling /usr/local/Cellar/pcre2/10.42/lib/libpcre2-32.0.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_html-3.2.0.2.1.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_qa-3.2.0.2.1.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_osx_cocoau_core-3.2.0.2.1.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_baseu_xml-3.2.0.2.1.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_baseu_net-3.2.0.2.1.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libwx_baseu-3.2.0.2.1.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libswresample.4.7.100.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libbluray.2.dylib.
 	Bundling /usr/local/Cellar/fontconfig/2.14.2/lib/libfontconfig.1.dylib.
-	Bundling /usr/local/Cellar/freetype/2.12.1/lib/libfreetype.6.dylib.
+	Bundling /usr/local/Cellar/freetype/2.13.0_1/lib/libfreetype.6.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libgnutls.30.dylib.
 	Bundling /usr/local/Cellar/gettext/0.21.1/lib/libintl.8.dylib.
 	Bundling /usr/local/Cellar/p11-kit/0.24.1_1/lib/libp11-kit.0.dylib.
@@ -486,11 +486,11 @@ Updating dependendies for Spek.app/Contents/Frameworks/librist.4.dylib.
 	Bundling /usr/local/Cellar/mbedtls/3.3.0/lib/libmbedcrypto.3.3.0.dylib.
 	Bundling /usr/local/Cellar/cjson/1.7.15/lib/libcjson.1.7.15.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libsrt.1.5.1.dylib.
-	Bundling /usr/local/Cellar/openssl@1.1/1.1.1s/lib/libssl.1.1.dylib.
-	Bundling /usr/local/Cellar/openssl@1.1/1.1.1s/lib/libcrypto.1.1.dylib.
+	Bundling /usr/local/Cellar/openssl@1.1/1.1.1t/lib/libssl.1.1.dylib.
+	Bundling /usr/local/Cellar/openssl@1.1/1.1.1t/lib/libcrypto.1.1.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libzmq.5.dylib.
 	Bundling /usr/local/Cellar/libsodium/1.0.18_1/lib/libsodium.23.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libvpx.7.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libvpx.8.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libwebpmux.3.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libwebp.7.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libsharpyuv.0.dylib.
@@ -498,11 +498,11 @@ Updating dependendies for Spek.app/Contents/Frameworks/liblzma.5.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libaribb24.0.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libdav1d.6.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libopencore-amrwb.0.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libsnappy.1.1.9.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libaom.3.5.0.dylib.
-	Bundling /usr/local/Cellar/highway/1.0.3/lib/libhwy.1.0.3.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libsnappy.1.1.10.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libaom.3.6.0.dylib.
+	Bundling /usr/local/Cellar/highway/1.0.4/lib/libhwy.1.0.4.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libvmaf.1.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libjxl.0.8.0.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libjxl.0.8.1.dylib.
 	Bundling /usr/local/Cellar/brotli/1.0.9/lib/libbrotlidec.1.0.9.dylib.
 	Bundling /usr/local/Cellar/brotli/1.0.9/lib/libbrotlicommon.1.0.9.dylib.
 	Bundling /usr/local/Cellar/brotli/1.0.9/lib/libbrotlienc.1.0.9.dylib.
@@ -522,10 +522,12 @@ Updating dependendies for Spek.app/Contents/Frameworks/libx264.164.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libx265.199.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libsoxr.0.1.2.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libX11.6.dylib.
-	Bundling /usr/local/Cellar/libxcb/1.15/lib/libxcb.1.1.0.dylib.
+	Bundling /usr/local/Cellar/libxcb/1.15_1/lib/libxcb.1.1.0.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libpng16.16.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libjpeg.8.2.2.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libtiff.5.dylib.
+	Bundling /usr/local/Cellar/zstd/1.5.4/lib/libzstd.1.5.4.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libpcre2-32.0.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libfontconfig.1.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libfreetype.6.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libintl.8.dylib.
@@ -542,17 +544,18 @@ Updating dependendies for Spek.app/Contents/Frameworks/libcjson.1.7.15.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libssl.1.1.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libcrypto.1.1.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libsodium.23.dylib.
-Updating dependendies for Spek.app/Contents/Frameworks/libhwy.1.0.3.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libhwy.1.0.4.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libbrotlidec.1.0.9.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libbrotlicommon.1.0.9.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libbrotlienc.1.0.9.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libxcb.1.1.0.dylib.
 	Bundling /usr/local/Cellar/libxau/1.0.11/lib/libXau.6.0.0.dylib.
 	Bundling /usr/local/Cellar/libxdmcp/1.1.4/lib/libXdmcp.6.dylib.
+Updating dependendies for Spek.app/Contents/Frameworks/libzstd.1.5.4.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libffi.8.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libXau.6.0.0.dylib.
 Updating dependendies for Spek.app/Contents/Frameworks/libXdmcp.6.dylib.
-Creating disk image (89MB)...
+Creating disk image (91MB)...
 Attaching to disk image...
 Populating image...
 Detaching from disk image...
