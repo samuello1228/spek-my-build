@@ -1,5 +1,5 @@
 #install dependencies
-brew install automake coreutils intltool
+brew install automake coreutils
 
 #need to use ffmpeg 4 for using avcodec_decode_audio4
 brew install ffmpeg@4
